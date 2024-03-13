@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    border: 2px solid black;
+}
+
+.banner {
+    border-bottom: 2px solid black;
+    padding: 20px;
+}
+
+.navigation {
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.main-content {
+    display: flex;
+    border-bottom: 2px solid black;
+    width: 50px;
+    height: 50%;
+
+}
+
+.picture {
+    float: left;
+    flex: 1;
+    border-right: 2px solid black;
+    padding: 20px;
+    height: 100%; /* Adjust as needed */
+}
+
+.about-me {
+    float: left;
+    flex: 3;
+    border-right: 2px solid black;
+    padding: 20px;
+    height: 100%; /* Adjust as needed */
+}
+
+.recent-tweets {
+    float:left;
+    flex: 2;
+    padding: 20px;
+    height: 100%; /* Adjust as needed */
+}
+
+.footer {
+    border-top: 2px solid black;
+    padding: 20px;
+    text-align: center;
+}
