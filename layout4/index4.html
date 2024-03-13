@@ -1,69 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 4</title>
-    <style>
-        body * {
-            border: 2px solid black;
-            font-size: 16px; /* changed font-size to a reasonable value */
-            text-align: center;
-            box-sizing: border-box; /* added to include padding and border in element's total width and height */
-        }
-
-        header {
-            padding: 1.5rem; /* changed padding value */
-        }
-
-        nav {
-            padding: 1rem; /* added padding */
-        }
-
-        aside.main {
-            float: left; /* changed to left to make it align properly */
-            width: 70%; /* added width */
-            padding: 1rem; /* added padding */
-            box-sizing: border-box; /* added to include padding and border in element's total width and height */
-        }
-
-        aside.side {
-            float: right;
-            width: 30%; /* added width */
-            padding: 1rem; /* added padding */
-            box-sizing: border-box; /* added to include padding and border in element's total width and height */
-        }
-
-        #pic,
-        #abtMe,
-        #tweets {
-            padding: 1rem; /* changed padding value */
-            margin: 1rem; /* added margin */
-        }
-
-        #pic {
-            clear: both; /* added to clear the float */
-        }
-
-        footer {
-            clear: both; /* added to clear the float */
-            margin-top: 1.5rem; /* changed margin-top value */
-        }
-    </style>
-
+    <title>Page title</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
-
 <body>
-    <header>Banner</header>
-    <nav>Navigation Links</nav>
-    <aside class="main">Main Content</aside>
-    <aside class="side">
-        <section id="pic">Picture</section>
-        <section id="abtMe">About Me Blurb</section>
-        <section id="tweets">Recent Tweets</section>
-    </aside>
-    <footer>Footer</footer>
+        <div class="grid-container">
+        <div class="ban">BANNER</div>
+        <div class="nav">NAVIGATION LINKS</div>
+        <div class="main">MAIN CONTENT</div>
+        <div class="picture">PICTURE</div>
+        <div class="about">ABOUT ME</div>
+        <div class="recent">RECENT TWEETS</div>
+        <div class="footer">FOOTER</div>
+    </div>
 </body>
-
 </html>
