@@ -1,73 +1,132 @@
-.grid-container {
-    display: grid;
-    box-sizing:border-box;
-    grid-template-areas:
-    "banner banner banner banner banner banner"
-    "nav nav nav nav nav nav"
-    "main main main picture about about"
-    "main main main picture about about"
-    "main main main recent recent recent"
-    "main main main recent recent recent"
-    "main main main recent recent recent"
-    "footer footer footer footer footer footer";
-    height: auto;
-    }
-    .ban {
-    grid-area: banner;
-    border: 2px solid black;
-    border-bottom: none;
-    height: 5rem;
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #2c09ee;
+}
+
+nav {
+    padding: 10px;
+    text-align: center;
+    background-color: #badfd7;
+}
+
+.container {
     display: flex;
+    flex-direction: column;
+}
+
+.content-a {
+    padding: 20px;
+    height: 500px;
+    background-color: #f89706;
     justify-content: center;
-    align-items: center;
-    }
-    .nav {
-    grid-area: nav;
-    border: 2px solid black;
-    height: 3rem;
+    align-content: center;
+}
+
+
+.content-b {
+    float: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    align-content: flex-start;
+    padding: 20px;
+    background-color: #b7fdfd;
+    flex-wrap: wrap;
+    gap: 10px;
     }
-    .main {
-    grid-area: main;
-    border: 2px solid black;
-    border-bottom: none;
-    border-top: none;
-    height: 40rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.picture,
+.about {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    flex-basis: 100px;
+    flex-grow: 1;
+    height: 200px;
+}
+
+.recent {
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    background-color:#e9089e ;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
     }
-    .picture {
-    grid-area: picture;
-    border: 2px solid black;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .content-a {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
     }
-    .about {
-    grid-area: about;
-    border: 2px solid black;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .content-b {
+        flex-wrap: wrap;
+        gap: 10px;
     }
-    .recent {
-    grid-area: recent;
-    border: 2px solid black;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+
+    .picture,
+    .about 
+    .recent{
+        flex-basis: 100px; 
+    } 
+}
+
+@media only screen and (max-width: 767px) { 
+    header,
+    nav,
+    .content-a,
+    .content-b,
+    .picture,
+    .about,
+    .recent,
     .footer {
-    grid-area: footer;
-    border: 2px solid black;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .picture,
+    .about,
+    .recent {
+        background-color: #f0f0f0;
+        text-align: center;
+        height: 200px;
+        width: 100%
+    }
+
+    .content-b {
+        display: flex;
+        padding: 10px;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .recent{
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 100px;
+        flex-grow: 1;
+        height: 200px;
+    }
+
+}

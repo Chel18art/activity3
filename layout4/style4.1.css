@@ -1,0 +1,48 @@
+/* Define flexbox layout as default */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* General styling for all grid items */
+.grid-container > div {
+    border: 2px solid black;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific styling for each grid area */
+.ban {
+    height: 5rem;
+}
+
+.nav {
+    height: 3rem;
+}
+
+.main {
+    height: 40rem;
+}
+
+.picture, .about, .recent {
+    height: 20rem; /* Equal height for picture, about, and recent */
+}
+
+.footer {
+    height: 2rem;
+}
+
+/* Media queries for tablet and phone sizes */
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        flex-direction: column;
+    }
+}
